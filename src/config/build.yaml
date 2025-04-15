@@ -100702,503 +100702,503 @@ x-validations:
               attr: "$.message.intent.tags[?(@.code=='bnp_demand_signal')].list[?(@.code=='search_term')].value"
               var_enum_search_terms: ["sweater", "winter wear", "woollens"]
               _RETURN_: attr any in var_enum_search_terms
-    on_search:
-      - _NAME_: REQUIRED_CONTEXT_DOMAIN
-        attr: "$.context.domain"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_CONTEXT_ACTION
-        attr: "$.context.action"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_CONTEXT_COUNTRY
-        attr: "$.context.country"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_CONTEXT_CORE_VERSION
-        attr: "$.context.core_version"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_CONTEXT_BAP_ID
-        attr: "$.context.bap_id"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_CONTEXT_BAP_URI
-        attr: "$.context.bap_uri"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_CONTEXT_BPP_ID
-        attr: "$.context.bpp_id"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_CONTEXT_BPP_URI
-        attr: "$.context.bpp_uri"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_CONTEXT_TRANSACTION_ID
-        attr: "$.context.transaction_id"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_CONTEXT_MESSAGE_ID
-        attr: "$.context.message_id"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_CONTEXT_TIMESTAMP
-        attr: "$.context.timestamp"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_CONTEXT_CITY
-        attr: "$.context.city"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_ID
-        attr: "$.message.catalog['bpp/fulfillments'][*].id"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_TYPE
-        attr: "$.message.catalog['bpp/fulfillments'][*].type"
-        _RETURN_: attr are present && attr all in enumList
-        enumList:
-        - Delivery
-        - Self-Pickup
-        - Delivery and Self-Pickup
-      - _NAME_: REQUIRED_MESSAGE_NAME
-        attr: "$.message.catalog['bpp/descriptor'].name"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_SYMBOL
-        attr: "$.message.catalog['bpp/descriptor'].symbol"
-        _RETURN_: attr are present && attr all in enumList
-        enumList:
-        - 'TRUE'
-        - 'FALSE'
-      - _NAME_: REQUIRED_MESSAGE_SHORT_DESC
-        attr: "$.message.catalog['bpp/descriptor'].short_desc"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_LONG_DESC
-        attr: "$.message.catalog['bpp/descriptor'].long_desc"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_IMAGES
-        attr: "$.message.catalog['bpp/descriptor'].images[*]"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_ID_20
-        attr: "$.message.catalog['bpp/providers'][*].id"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_NAME_21
-        attr: "$.message.catalog['bpp/providers'][*].descriptor.name"
-        _RETURN_: attr are present && attr all in enumList
-        enumList:
-        - 10 (HYPERLOCAL)
-        - 11 (INTERCITY)
-        - 12 (PAN-INDIA)
-        - 13 (POLYGON)
-      - _NAME_: REQUIRED_MESSAGE_SYMBOL_22
-        attr: "$.message.catalog['bpp/providers'][*].descriptor.symbol"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_SHORT_DESC_23
-        attr: "$.message.catalog['bpp/providers'][*].descriptor.short_desc"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_LONG_DESC_24
-        attr: "$.message.catalog['bpp/providers'][*].descriptor.long_desc"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_IMAGES_25
-        attr: "$.message.catalog['bpp/providers'][*].descriptor.images[*]"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_TTL
-        attr: "$.message.catalog['bpp/providers'][*].ttl"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_NAME_27
-        attr: "$.message.catalog['bpp/providers'][*].descriptor.name"
-        _RETURN_: attr are present && attr all in enumList
-        enumList:
-        - 10 (HYPERLOCAL)
-        - 11 (INTERCITY)
-        - 12 (PAN-INDIA)
-        - 13 (POLYGON)
-      - _NAME_: REQUIRED_MESSAGE_SYMBOL_28
-        attr: "$.message.catalog['bpp/providers'][*].descriptor.symbol"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_SHORT_DESC_29
-        attr: "$.message.catalog['bpp/providers'][*].descriptor.short_desc"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_LONG_DESC_30
-        attr: "$.message.catalog['bpp/providers'][*].descriptor.long_desc"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_IMAGES_31
-        attr: "$.message.catalog['bpp/providers'][*].descriptor.images[*]"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_CURRENCY
-        attr: "$.message.catalog['bpp/providers'][*].items[*].price.currency"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_VALUE
-        attr: "$.message.catalog['bpp/providers'][*].items[*].price.value"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_MAXIMUM_VALUE
-        attr: "$.message.catalog['bpp/providers'][*].items[*].price.maximum_value"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_UNIT
-        attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.unitized.measure.unit"
-        _RETURN_: attr are present && attr all in enumList
-        enumList:
-        - UNIT
-        - DOZEN
-        - GRAM
-        - KILOGRAM
-        - TONNE
-        - LITRE
-        - MILLILITRE
-      - _NAME_: REQUIRED_MESSAGE_VALUE_36
-        attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.unitized.measure.value"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_COUNT
-        attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.unitized.count"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_COUNT_38
-        attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.available.count"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_COUNT_39
-        attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.maximum.count"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_COUNT_40
-        attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.maximum.count"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_CATEGORY_ID
-        attr: "$.message.catalog['bpp/providers'][*].category_id"
-        _RETURN_: attr are present && attr all in enumList
-        enumList:
-        - LINK
-        - INLINE
-      - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGRETURNABLE
-        attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/returnable']"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_RATING
-        attr: "$.message.catalog['bpp/providers'][*].rating"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGCANCELLABLE
-        attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/cancellable']"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGAVAILABLE_ON_COD
-        attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/available_on_cod']"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_TIMESTAMP
-        attr: "$.message.catalog['bpp/providers'][*].time.timestamp"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_DURATION
-        attr: "$.message.catalog['bpp/providers'][*].items[*].replacement_terms[*].replace_within.duration"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGRETURN_WINDOW
-        attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/return_window']"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGSELLER_PICKUP_RETURN
-        attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/seller_pickup_return']"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGTIME_TO_SHIP
-        attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/time_to_ship']"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGCONTACT_DETAILS_CONSUMER_CARE
-        attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/contact_details_consumer_care']"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_RATING_52
-        attr: "$.message.catalog['bpp/providers'][*].rating"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_TYPE_53
-        attr: "$.message.catalog['bpp/providers'][*].fulfillments[*].type"
-        _RETURN_: attr are present && attr all in enumList
-        enumList:
-        - Delivery
-        - Self-Pickup
-        - Delivery and Self-Pickup
-      - _NAME_: REQUIRED_MESSAGE_LABEL
-        attr: "$.message.catalog['bpp/providers'][*].time.label"
-        _RETURN_: attr are present && attr all in enumList
-        enumList:
-        - ENABLE
-        - DISABLE
-      - _NAME_: REQUIRED_MESSAGE_TIMESTAMP_55
-        attr: "$.message.catalog['bpp/providers'][*].time.timestamp"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_ID_56
-        attr: "$.message.catalog['bpp/providers'][*].locations[*].id"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_LABEL_57
-        attr: "$.message.catalog['bpp/providers'][*].locations[*].time.label"
-        _RETURN_: attr are present && attr all in enumList
-        enumList:
-        - ENABLE
-        - DISABLE
-      - _NAME_: REQUIRED_MESSAGE_TIMESTAMP_58
-        attr: "$.message.catalog['bpp/providers'][*].locations[*].time.timestamp"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_START
-        attr: "$.message.catalog['bpp/providers'][*].locations[*].time.range.start"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_ID_60
-        attr: "$.message.catalog['bpp/providers'][*].categories[*].id"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_NAME_61
-        attr: "$.message.catalog['bpp/providers'][*].categories[*].descriptor.name"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_SHORT_DESC_62
-        attr: "$.message.catalog['bpp/providers'][*].categories[*].descriptor.short_desc"
-        _RETURN_: attr are present
-      - _NAME_: REQUIRED_MESSAGE_LONG_DESC_63
-        attr: "$.message.catalog['bpp/providers'][*].categories[*].descriptor.long_desc"
-        _RETURN_: attr are present
-      - _NAME_: VALID_ENUM_MESSAGE_CODE
-        enumList:
-        - ISN
-        - MSN
-        enumPath: "$.message.catalog['bpp/descriptor'].tags[*].code"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_NAME
-        enumList:
-        - "Y"
-        - "N"
-        enumPath: "$.message.catalog['bpp/descriptor'].tags[*].name"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_NAME_3
-        enumList:
-        - "Y"
-        - "N"
-        enumPath: "$.message.catalog['bpp/descriptor'].tags[*].name"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_SYMBOL
-        enumList:
-        - 'TRUE'
-        - 'FALSE'
-        enumPath: "$.message.catalog['bpp/descriptor'].symbol"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_TYPE
-        enumList:
-        - Delivery
-        - Self-Pickup
-        - Delivery and Self-Pickup
-        enumPath: "$.message.catalog['bpp/fulfillments'][*].type"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_TYPE_6
-        enumList:
-        - Delivery
-        - Self-Pickup
-        - Delivery and Self-Pickup
-        enumPath: "$.message.catalog['bpp/providers'][*].fulfillments[*].type"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_LABEL
-        enumList:
-        - CUSTOM_MENU
-        - CUSTOM_GROUP
-        - VARIANT_GROUP
-        enumPath: "$.message.catalog['bpp/providers'][*].categories[*].time.label"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_LABEL_8
-        enumList:
-        - SELF-PICKUP
-        - ORDER
-        - DELIVERY
-        - ALL
-        enumPath: "$.message.catalog['bpp/providers'][*].categories[*].time.label"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_CODE_9
-        enumList:
-        - SELECT
-        - TEXT
-        enumPath: "$.message.catalog['bpp/providers'][*].categories[*].tags.code"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_START
-        enumList:
-        - PERCENT
-        - AMOUNT
-        enumPath: "$.message.catalog['bpp/providers'][*].categories[*].time.range.start"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_LABEL_11
-        enumList:
-        - ENABLE
-        - DISABLE
-        enumPath: "$.message.catalog['bpp/providers'][*].time.label"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_CODE_12
-        enumList:
-        - ITEM
-        - DYNAMIC_ITEM
-        - CUSTOMIZATION
-        enumPath: "$.message.catalog['bpp/providers'][*].tags[*].code"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_END
-        enumList:
-        - https://github.com/ONDC-Official/protocol-network-extension/tree/main/enums/retail
-        enumPath: "$.message.catalog['bpp/providers'][*].time.range.end"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_CODE_14
-        enumList:
-        - VEG
-        - NON_VEG
-        - EGG
-        enumPath: "$.message.catalog['bpp/providers'][*].tags[*].code"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_START_15
-        enumList:
-        - PERCENT
-        - AMOUNT
-        enumPath: "$.message.catalog['bpp/providers'][*].time.range.start"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_CATEGORY_ID
-        enumList:
-        - https://docs.google.com/spreadsheets/d/1APAvavF_BNbTA89benAlGtv0GuFvpn2b6XXi4lSdTTw/edit?gid=0#gid=0
-        enumPath: "$.message.catalog['bpp/providers'][*].items[*].category_id"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_UNIT
-        enumList:
-        - UNIT
-        - DOZEN
-        - GRAM
-        - KILOGRAM
-        - TONNE
-        - LITRE
-        - MILLILITRE
-        enumPath: "$.message.catalog['bpp/providers'][*].items[*].quantity.unitized.measure.unit"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_VALUE
-        enumList:
-        - PERCENT
-        - AMOUNT
-        enumPath: "$.message.catalog['bpp/providers'][*].offers[*].tags.list[*].value"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_CODE_19
-        enumList:
-        - 'YES'
-        - 'NO'
-        enumPath: "$.message.catalog['bpp/providers'][*].tags[*].code"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_NAME_20
-        enumList:
-        - 'YES'
-        - 'NO'
-        enumPath: "$.message.catalog['bpp/providers'][*].offers[*].tags.name"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_NAME_21
-        enumList:
-        - 10 (HYPERLOCAL)
-        - 11 (INTERCITY)
-        - 12 (PAN-INDIA)
-        - 13 (POLYGON)
-        enumPath: "$.message.catalog['bpp/providers'][*].descriptor.name"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_NAME_22
-        enumList:
-        - KM
-        - GEOJSON
-        enumPath: "$.message.catalog['bpp/providers'][*].descriptor.name"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_CATEGORY_ID_23
-        enumList:
-        - LINK
-        - INLINE
-        enumPath: "$.message.catalog['bpp/providers'][*].category_id"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_START_24
-        enumList:
-        - PERCENT
-        - AMOUNT
-        enumPath: "$.message.catalog['bpp/providers'][*].time.range.start"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_LABEL_25
-        enumList:
-        - ENABLE
-        - DISABLE
-        enumPath: "$.message.catalog['bpp/providers'][*].time.label"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: VALID_ENUM_MESSAGE_LABEL_26
-        enumList:
-        - ENABLE
-        - DISABLE
-        enumPath: "$.message.catalog['bpp/providers'][*].locations[*].time.label"
-        _CONTINUE_: "!(enumPath are present)"
-        _RETURN_: enumPath all in enumList
-      - _NAME_: validate_tag_0
-        validTags:
-        - bpp_terms
-        tagPath: "$.message.catalog['bpp/descriptor'].tags[*].code"
-        _CONTINUE_: "!(tagPath are present)"
-        _RETURN_: tagPath all in validTags
-      - _NAME_: validate_tag_0_bpp_terms
-        _SCOPE_: "$.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')]"
-        subTags: "$.list[*].code"
-        validValues:
-        - np_type
-        - accept_bap_terms
-        - collect_payment
-        - max_liability
-        - max_liability_cap
-        - mandatory_arbitration
-        - court_jurisdiction
-        - delay_interest
-        _RETURN_: subTags all in validValues
-      - _NAME_: validate_tag_1
-        validTags:
-        - serviceability
-        - order_value
-        - catalog_link
-        - timing
-        - np_fees
-        tagPath: "$.message.catalog['bpp/providers'][*].tags[*].code"
-        _CONTINUE_: "!(tagPath are present)"
-        _RETURN_: tagPath all in validTags
-      - _NAME_: validate_tag_1_serviceability
-        _SCOPE_: "$.message.catalog['bpp/providers'][*].tags[?(@.code=='serviceability')]"
-        subTags: "$.list[*].code"
-        validValues:
-        - location
-        - category
-        - type
-        - val
-        - day_from
-        - day_to
-        - time_from
-        - time_to
-        - unit
-        _RETURN_: subTags all in validValues
-      - _NAME_: validate_tag_1_order_value
-        _SCOPE_: "$.message.catalog['bpp/providers'][*].tags[?(@.code=='order_value')]"
-        subTags: "$.list[*].code"
-        validValues:
-        - min_value
-        _RETURN_: subTags all in validValues
-      - _NAME_: validate_tag_1_catalog_link
-        _SCOPE_: "$.message.catalog['bpp/providers'][*].tags[?(@.code=='catalog_link')]"
-        subTags: "$.list[*].code"
-        validValues:
-        - type
-        - type_value
-        - type_validity
-        - last_update
-        _RETURN_: subTags all in validValues
-      - _NAME_: validate_tag_1_timing
-        _SCOPE_: "$.message.catalog['bpp/providers'][*].tags[?(@.code=='timing')]"
-        subTags: "$.list[*].code"
-        validValues:
-        - type
-        - location
-        - day_from
-        - day_to
-        - time_from
-        - time_to
-        _RETURN_: subTags all in validValues
-      - _NAME_: validate_tag_1_np_fees
-        _SCOPE_: "$.message.catalog['bpp/providers'][*].tags[?(@.code=='np_fees')]"
-        subTags: "$.list[*].code"
-        validValues:
-        - channel_margin_type
-        - channel_margin_value
-        _RETURN_: subTags all in validValues
+    # on_search:
+    #   - _NAME_: REQUIRED_CONTEXT_DOMAIN
+    #     attr: "$.context.domain"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_CONTEXT_ACTION
+    #     attr: "$.context.action"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_CONTEXT_COUNTRY
+    #     attr: "$.context.country"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_CONTEXT_CORE_VERSION
+    #     attr: "$.context.core_version"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_CONTEXT_BAP_ID
+    #     attr: "$.context.bap_id"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_CONTEXT_BAP_URI
+    #     attr: "$.context.bap_uri"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_CONTEXT_BPP_ID
+    #     attr: "$.context.bpp_id"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_CONTEXT_BPP_URI
+    #     attr: "$.context.bpp_uri"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_CONTEXT_TRANSACTION_ID
+    #     attr: "$.context.transaction_id"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_CONTEXT_MESSAGE_ID
+    #     attr: "$.context.message_id"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_CONTEXT_TIMESTAMP
+    #     attr: "$.context.timestamp"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_CONTEXT_CITY
+    #     attr: "$.context.city"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_ID
+    #     attr: "$.message.catalog['bpp/fulfillments'][*].id"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_TYPE
+    #     attr: "$.message.catalog['bpp/fulfillments'][*].type"
+    #     _RETURN_: attr are present && attr all in enumList
+    #     enumList:
+    #     - Delivery
+    #     - Self-Pickup
+    #     - Delivery and Self-Pickup
+    #   - _NAME_: REQUIRED_MESSAGE_NAME
+    #     attr: "$.message.catalog['bpp/descriptor'].name"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_SYMBOL
+    #     attr: "$.message.catalog['bpp/descriptor'].symbol"
+    #     _RETURN_: attr are present && attr all in enumList
+    #     enumList:
+    #     - 'TRUE'
+    #     - 'FALSE'
+    #   - _NAME_: REQUIRED_MESSAGE_SHORT_DESC
+    #     attr: "$.message.catalog['bpp/descriptor'].short_desc"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_LONG_DESC
+    #     attr: "$.message.catalog['bpp/descriptor'].long_desc"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_IMAGES
+    #     attr: "$.message.catalog['bpp/descriptor'].images[*]"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_ID_20
+    #     attr: "$.message.catalog['bpp/providers'][*].id"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_NAME_21
+    #     attr: "$.message.catalog['bpp/providers'][*].descriptor.name"
+    #     _RETURN_: attr are present && attr all in enumList
+    #     enumList:
+    #     - 10 (HYPERLOCAL)
+    #     - 11 (INTERCITY)
+    #     - 12 (PAN-INDIA)
+    #     - 13 (POLYGON)
+    #   - _NAME_: REQUIRED_MESSAGE_SYMBOL_22
+    #     attr: "$.message.catalog['bpp/providers'][*].descriptor.symbol"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_SHORT_DESC_23
+    #     attr: "$.message.catalog['bpp/providers'][*].descriptor.short_desc"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_LONG_DESC_24
+    #     attr: "$.message.catalog['bpp/providers'][*].descriptor.long_desc"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_IMAGES_25
+    #     attr: "$.message.catalog['bpp/providers'][*].descriptor.images[*]"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_TTL
+    #     attr: "$.message.catalog['bpp/providers'][*].ttl"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_NAME_27
+    #     attr: "$.message.catalog['bpp/providers'][*].descriptor.name"
+    #     _RETURN_: attr are present && attr all in enumList
+    #     enumList:
+    #     - 10 (HYPERLOCAL)
+    #     - 11 (INTERCITY)
+    #     - 12 (PAN-INDIA)
+    #     - 13 (POLYGON)
+    #   - _NAME_: REQUIRED_MESSAGE_SYMBOL_28
+    #     attr: "$.message.catalog['bpp/providers'][*].descriptor.symbol"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_SHORT_DESC_29
+    #     attr: "$.message.catalog['bpp/providers'][*].descriptor.short_desc"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_LONG_DESC_30
+    #     attr: "$.message.catalog['bpp/providers'][*].descriptor.long_desc"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_IMAGES_31
+    #     attr: "$.message.catalog['bpp/providers'][*].descriptor.images[*]"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_CURRENCY
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*].price.currency"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_VALUE
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*].price.value"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_MAXIMUM_VALUE
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*].price.maximum_value"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_UNIT
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.unitized.measure.unit"
+    #     _RETURN_: attr are present && attr all in enumList
+    #     enumList:
+    #     - UNIT
+    #     - DOZEN
+    #     - GRAM
+    #     - KILOGRAM
+    #     - TONNE
+    #     - LITRE
+    #     - MILLILITRE
+    #   - _NAME_: REQUIRED_MESSAGE_VALUE_36
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.unitized.measure.value"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_COUNT
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.unitized.count"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_COUNT_38
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.available.count"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_COUNT_39
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.maximum.count"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_COUNT_40
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*].quantity.maximum.count"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_CATEGORY_ID
+    #     attr: "$.message.catalog['bpp/providers'][*].category_id"
+    #     _RETURN_: attr are present && attr all in enumList
+    #     enumList:
+    #     - LINK
+    #     - INLINE
+    #   - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGRETURNABLE
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/returnable']"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_RATING
+    #     attr: "$.message.catalog['bpp/providers'][*].rating"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGCANCELLABLE
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/cancellable']"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGAVAILABLE_ON_COD
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/available_on_cod']"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_TIMESTAMP
+    #     attr: "$.message.catalog['bpp/providers'][*].time.timestamp"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_DURATION
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*].replacement_terms[*].replace_within.duration"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGRETURN_WINDOW
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/return_window']"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGSELLER_PICKUP_RETURN
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/seller_pickup_return']"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGTIME_TO_SHIP
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/time_to_ship']"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_ITEMSONDCORGCONTACT_DETAILS_CONSUMER_CARE
+    #     attr: "$.message.catalog['bpp/providers'][*].items[*]['@ondc/org/contact_details_consumer_care']"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_RATING_52
+    #     attr: "$.message.catalog['bpp/providers'][*].rating"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_TYPE_53
+    #     attr: "$.message.catalog['bpp/providers'][*].fulfillments[*].type"
+    #     _RETURN_: attr are present && attr all in enumList
+    #     enumList:
+    #     - Delivery
+    #     - Self-Pickup
+    #     - Delivery and Self-Pickup
+    #   - _NAME_: REQUIRED_MESSAGE_LABEL
+    #     attr: "$.message.catalog['bpp/providers'][*].time.label"
+    #     _RETURN_: attr are present && attr all in enumList
+    #     enumList:
+    #     - ENABLE
+    #     - DISABLE
+    #   - _NAME_: REQUIRED_MESSAGE_TIMESTAMP_55
+    #     attr: "$.message.catalog['bpp/providers'][*].time.timestamp"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_ID_56
+    #     attr: "$.message.catalog['bpp/providers'][*].locations[*].id"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_LABEL_57
+    #     attr: "$.message.catalog['bpp/providers'][*].locations[*].time.label"
+    #     _RETURN_: attr are present && attr all in enumList
+    #     enumList:
+    #     - ENABLE
+    #     - DISABLE
+    #   - _NAME_: REQUIRED_MESSAGE_TIMESTAMP_58
+    #     attr: "$.message.catalog['bpp/providers'][*].locations[*].time.timestamp"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_START
+    #     attr: "$.message.catalog['bpp/providers'][*].locations[*].time.range.start"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_ID_60
+    #     attr: "$.message.catalog['bpp/providers'][*].categories[*].id"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_NAME_61
+    #     attr: "$.message.catalog['bpp/providers'][*].categories[*].descriptor.name"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_SHORT_DESC_62
+    #     attr: "$.message.catalog['bpp/providers'][*].categories[*].descriptor.short_desc"
+    #     _RETURN_: attr are present
+    #   - _NAME_: REQUIRED_MESSAGE_LONG_DESC_63
+    #     attr: "$.message.catalog['bpp/providers'][*].categories[*].descriptor.long_desc"
+    #     _RETURN_: attr are present
+    #   - _NAME_: VALID_ENUM_MESSAGE_CODE
+    #     enumList:
+    #     - ISN
+    #     - MSN
+    #     enumPath: "$.message.catalog['bpp/descriptor'].tags[*].code"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_NAME
+    #     enumList:
+    #     - "Y"
+    #     - "N"
+    #     enumPath: "$.message.catalog['bpp/descriptor'].tags[*].name"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_NAME_3
+    #     enumList:
+    #     - "Y"
+    #     - "N"
+    #     enumPath: "$.message.catalog['bpp/descriptor'].tags[*].name"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_SYMBOL
+    #     enumList:
+    #     - 'TRUE'
+    #     - 'FALSE'
+    #     enumPath: "$.message.catalog['bpp/descriptor'].symbol"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_TYPE
+    #     enumList:
+    #     - Delivery
+    #     - Self-Pickup
+    #     - Delivery and Self-Pickup
+    #     enumPath: "$.message.catalog['bpp/fulfillments'][*].type"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_TYPE_6
+    #     enumList:
+    #     - Delivery
+    #     - Self-Pickup
+    #     - Delivery and Self-Pickup
+    #     enumPath: "$.message.catalog['bpp/providers'][*].fulfillments[*].type"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_LABEL
+    #     enumList:
+    #     - CUSTOM_MENU
+    #     - CUSTOM_GROUP
+    #     - VARIANT_GROUP
+    #     enumPath: "$.message.catalog['bpp/providers'][*].categories[*].time.label"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_LABEL_8
+    #     enumList:
+    #     - SELF-PICKUP
+    #     - ORDER
+    #     - DELIVERY
+    #     - ALL
+    #     enumPath: "$.message.catalog['bpp/providers'][*].categories[*].time.label"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_CODE_9
+    #     enumList:
+    #     - SELECT
+    #     - TEXT
+    #     enumPath: "$.message.catalog['bpp/providers'][*].categories[*].tags.code"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_START
+    #     enumList:
+    #     - PERCENT
+    #     - AMOUNT
+    #     enumPath: "$.message.catalog['bpp/providers'][*].categories[*].time.range.start"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_LABEL_11
+    #     enumList:
+    #     - ENABLE
+    #     - DISABLE
+    #     enumPath: "$.message.catalog['bpp/providers'][*].time.label"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_CODE_12
+    #     enumList:
+    #     - ITEM
+    #     - DYNAMIC_ITEM
+    #     - CUSTOMIZATION
+    #     enumPath: "$.message.catalog['bpp/providers'][*].tags[*].code"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_END
+    #     enumList:
+    #     - https://github.com/ONDC-Official/protocol-network-extension/tree/main/enums/retail
+    #     enumPath: "$.message.catalog['bpp/providers'][*].time.range.end"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_CODE_14
+    #     enumList:
+    #     - VEG
+    #     - NON_VEG
+    #     - EGG
+    #     enumPath: "$.message.catalog['bpp/providers'][*].tags[*].code"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_START_15
+    #     enumList:
+    #     - PERCENT
+    #     - AMOUNT
+    #     enumPath: "$.message.catalog['bpp/providers'][*].time.range.start"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_CATEGORY_ID
+    #     enumList:
+    #     - https://docs.google.com/spreadsheets/d/1APAvavF_BNbTA89benAlGtv0GuFvpn2b6XXi4lSdTTw/edit?gid=0#gid=0
+    #     enumPath: "$.message.catalog['bpp/providers'][*].items[*].category_id"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_UNIT
+    #     enumList:
+    #     - UNIT
+    #     - DOZEN
+    #     - GRAM
+    #     - KILOGRAM
+    #     - TONNE
+    #     - LITRE
+    #     - MILLILITRE
+    #     enumPath: "$.message.catalog['bpp/providers'][*].items[*].quantity.unitized.measure.unit"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_VALUE
+    #     enumList:
+    #     - PERCENT
+    #     - AMOUNT
+    #     enumPath: "$.message.catalog['bpp/providers'][*].offers[*].tags.list[*].value"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_CODE_19
+    #     enumList:
+    #     - 'YES'
+    #     - 'NO'
+    #     enumPath: "$.message.catalog['bpp/providers'][*].tags[*].code"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_NAME_20
+    #     enumList:
+    #     - 'YES'
+    #     - 'NO'
+    #     enumPath: "$.message.catalog['bpp/providers'][*].offers[*].tags.name"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_NAME_21
+    #     enumList:
+    #     - 10 (HYPERLOCAL)
+    #     - 11 (INTERCITY)
+    #     - 12 (PAN-INDIA)
+    #     - 13 (POLYGON)
+    #     enumPath: "$.message.catalog['bpp/providers'][*].descriptor.name"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_NAME_22
+    #     enumList:
+    #     - KM
+    #     - GEOJSON
+    #     enumPath: "$.message.catalog['bpp/providers'][*].descriptor.name"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_CATEGORY_ID_23
+    #     enumList:
+    #     - LINK
+    #     - INLINE
+    #     enumPath: "$.message.catalog['bpp/providers'][*].category_id"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_START_24
+    #     enumList:
+    #     - PERCENT
+    #     - AMOUNT
+    #     enumPath: "$.message.catalog['bpp/providers'][*].time.range.start"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_LABEL_25
+    #     enumList:
+    #     - ENABLE
+    #     - DISABLE
+    #     enumPath: "$.message.catalog['bpp/providers'][*].time.label"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: VALID_ENUM_MESSAGE_LABEL_26
+    #     enumList:
+    #     - ENABLE
+    #     - DISABLE
+    #     enumPath: "$.message.catalog['bpp/providers'][*].locations[*].time.label"
+    #     _CONTINUE_: "!(enumPath are present)"
+    #     _RETURN_: enumPath all in enumList
+    #   - _NAME_: validate_tag_0
+    #     validTags:
+    #     - bpp_terms
+    #     tagPath: "$.message.catalog['bpp/descriptor'].tags[*].code"
+    #     _CONTINUE_: "!(tagPath are present)"
+    #     _RETURN_: tagPath all in validTags
+    #   - _NAME_: validate_tag_0_bpp_terms
+    #     _SCOPE_: "$.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')]"
+    #     subTags: "$.list[*].code"
+    #     validValues:
+    #     - np_type
+    #     - accept_bap_terms
+    #     - collect_payment
+    #     - max_liability
+    #     - max_liability_cap
+    #     - mandatory_arbitration
+    #     - court_jurisdiction
+    #     - delay_interest
+    #     _RETURN_: subTags all in validValues
+    #   - _NAME_: validate_tag_1
+    #     validTags:
+    #     - serviceability
+    #     - order_value
+    #     - catalog_link
+    #     - timing
+    #     - np_fees
+    #     tagPath: "$.message.catalog['bpp/providers'][*].tags[*].code"
+    #     _CONTINUE_: "!(tagPath are present)"
+    #     _RETURN_: tagPath all in validTags
+    #   - _NAME_: validate_tag_1_serviceability
+    #     _SCOPE_: "$.message.catalog['bpp/providers'][*].tags[?(@.code=='serviceability')]"
+    #     subTags: "$.list[*].code"
+    #     validValues:
+    #     - location
+    #     - category
+    #     - type
+    #     - val
+    #     - day_from
+    #     - day_to
+    #     - time_from
+    #     - time_to
+    #     - unit
+    #     _RETURN_: subTags all in validValues
+    #   - _NAME_: validate_tag_1_order_value
+    #     _SCOPE_: "$.message.catalog['bpp/providers'][*].tags[?(@.code=='order_value')]"
+    #     subTags: "$.list[*].code"
+    #     validValues:
+    #     - min_value
+    #     _RETURN_: subTags all in validValues
+    #   - _NAME_: validate_tag_1_catalog_link
+    #     _SCOPE_: "$.message.catalog['bpp/providers'][*].tags[?(@.code=='catalog_link')]"
+    #     subTags: "$.list[*].code"
+    #     validValues:
+    #     - type
+    #     - type_value
+    #     - type_validity
+    #     - last_update
+    #     _RETURN_: subTags all in validValues
+    #   - _NAME_: validate_tag_1_timing
+    #     _SCOPE_: "$.message.catalog['bpp/providers'][*].tags[?(@.code=='timing')]"
+    #     subTags: "$.list[*].code"
+    #     validValues:
+    #     - type
+    #     - location
+    #     - day_from
+    #     - day_to
+    #     - time_from
+    #     - time_to
+    #     _RETURN_: subTags all in validValues
+    #   - _NAME_: validate_tag_1_np_fees
+    #     _SCOPE_: "$.message.catalog['bpp/providers'][*].tags[?(@.code=='np_fees')]"
+    #     subTags: "$.list[*].code"
+    #     validValues:
+    #     - channel_margin_type
+    #     - channel_margin_value
+    #     _RETURN_: subTags all in validValues
 
   _SESSION_DATA_: {}
