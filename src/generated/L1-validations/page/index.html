@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API SERVICE VALIDATIONS</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="content">
+        <h2>List of validations of api</h2>
+        <ul>
+<li><p><strong>search</strong> : All the following sub conditions must pass as per the api requirement</p>
+<ul>
+<li><p><strong>condition REQUIRED_CONTEXT_DOMAIN</strong>: all of the following sub conditions must be met:</p>
+<ul>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.1</strong>: $.context.domain must be present in the payload</li>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.2</strong>: every element of $.context.domain must be in [&quot;ONDC:RET11&quot;]</li>
+</ul>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_COUNTRY</strong>: $.context.country must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CITY</strong>: $.context.city must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_ACTION</strong>: $.context.action must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CORE_VERSION</strong>: $.context.core_version must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_ID</strong>: $.context.bap_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_URI</strong>: $.context.bap_uri must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TRANSACTION_ID</strong>: $.context.transaction_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_MESSAGE_ID</strong>: $.context.message_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TIMESTAMP</strong>: $.context.timestamp must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TTL</strong>: $.context.ttl must be present in the payload</p>
+</li>
+</ul>
+</li>
+<li><p><strong>on_search</strong> : All the following sub conditions must pass as per the api requirement</p>
+<ul>
+<li><p><strong>condition REQUIRED_CONTEXT_DOMAIN</strong>: all of the following sub conditions must be met:</p>
+<ul>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.1</strong>: $.context.domain must be present in the payload</li>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.2</strong>: every element of $.context.domain must be in [&quot;ONDC:RET11&quot;]</li>
+</ul>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_COUNTRY</strong>: $.context.country must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CITY</strong>: $.context.city must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_ACTION</strong>: $.context.action must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CORE_VERSION</strong>: $.context.core_version must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_ID</strong>: $.context.bap_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_URI</strong>: $.context.bap_uri must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TRANSACTION_ID</strong>: $.context.transaction_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_MESSAGE_ID</strong>: $.context.message_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TIMESTAMP</strong>: $.context.timestamp must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TTL</strong>: $.context.ttl must be present in the payload</p>
+</li>
+</ul>
+</li>
+<li><p><strong>select</strong> : All the following sub conditions must pass as per the api requirement</p>
+<ul>
+<li><p><strong>condition REQUIRED_CONTEXT_DOMAIN</strong>: all of the following sub conditions must be met:</p>
+<ul>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.1</strong>: $.context.domain must be present in the payload</li>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.2</strong>: every element of $.context.domain must be in [&quot;ONDC:RET11&quot;]</li>
+</ul>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_COUNTRY</strong>: $.context.country must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CITY</strong>: $.context.city must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_ACTION</strong>: $.context.action must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CORE_VERSION</strong>: $.context.core_version must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_ID</strong>: $.context.bap_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_URI</strong>: $.context.bap_uri must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TRANSACTION_ID</strong>: $.context.transaction_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_MESSAGE_ID</strong>: $.context.message_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TIMESTAMP</strong>: $.context.timestamp must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TTL</strong>: $.context.ttl must be present in the payload</p>
+</li>
+</ul>
+</li>
+<li><p><strong>on_select</strong> : All the following sub conditions must pass as per the api requirement</p>
+<ul>
+<li><p><strong>condition REQUIRED_CONTEXT_DOMAIN</strong>: all of the following sub conditions must be met:</p>
+<ul>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.1</strong>: $.context.domain must be present in the payload</li>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.2</strong>: every element of $.context.domain must be in [&quot;ONDC:RET11&quot;]</li>
+</ul>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_COUNTRY</strong>: $.context.country must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CITY</strong>: $.context.city must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_ACTION</strong>: $.context.action must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CORE_VERSION</strong>: $.context.core_version must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_ID</strong>: $.context.bap_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_URI</strong>: $.context.bap_uri must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TRANSACTION_ID</strong>: $.context.transaction_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_MESSAGE_ID</strong>: $.context.message_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TIMESTAMP</strong>: $.context.timestamp must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TTL</strong>: $.context.ttl must be present in the payload</p>
+</li>
+</ul>
+</li>
+<li><p><strong>init</strong> : All the following sub conditions must pass as per the api requirement</p>
+<ul>
+<li><p><strong>condition REQUIRED_CONTEXT_DOMAIN</strong>: all of the following sub conditions must be met:</p>
+<ul>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.1</strong>: $.context.domain must be present in the payload</li>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.2</strong>: every element of $.context.domain must be in [&quot;ONDC:RET11&quot;]</li>
+</ul>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_COUNTRY</strong>: $.context.country must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CITY</strong>: $.context.city must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_ACTION</strong>: $.context.action must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CORE_VERSION</strong>: $.context.core_version must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_ID</strong>: $.context.bap_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_URI</strong>: $.context.bap_uri must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TRANSACTION_ID</strong>: $.context.transaction_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_MESSAGE_ID</strong>: $.context.message_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TIMESTAMP</strong>: $.context.timestamp must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TTL</strong>: $.context.ttl must be present in the payload</p>
+</li>
+</ul>
+</li>
+<li><p><strong>on_init</strong> : All the following sub conditions must pass as per the api requirement</p>
+<ul>
+<li><p><strong>condition REQUIRED_CONTEXT_DOMAIN</strong>: all of the following sub conditions must be met:</p>
+<ul>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.1</strong>: $.context.domain must be present in the payload</li>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.2</strong>: every element of $.context.domain must be in [&quot;ONDC:RET11&quot;]</li>
+</ul>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_COUNTRY</strong>: $.context.country must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CITY</strong>: $.context.city must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_ACTION</strong>: $.context.action must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CORE_VERSION</strong>: $.context.core_version must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_ID</strong>: $.context.bap_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_URI</strong>: $.context.bap_uri must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TRANSACTION_ID</strong>: $.context.transaction_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_MESSAGE_ID</strong>: $.context.message_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TIMESTAMP</strong>: $.context.timestamp must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TTL</strong>: $.context.ttl must be present in the payload</p>
+</li>
+</ul>
+</li>
+<li><p><strong>confirm</strong> : All the following sub conditions must pass as per the api requirement</p>
+<ul>
+<li><p><strong>condition REQUIRED_CONTEXT_DOMAIN</strong>: all of the following sub conditions must be met:</p>
+<ul>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.1</strong>: $.context.domain must be present in the payload</li>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.2</strong>: every element of $.context.domain must be in [&quot;ONDC:RET11&quot;]</li>
+</ul>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_COUNTRY</strong>: $.context.country must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CITY</strong>: $.context.city must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_ACTION</strong>: $.context.action must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CORE_VERSION</strong>: $.context.core_version must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_ID</strong>: $.context.bap_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_URI</strong>: $.context.bap_uri must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TRANSACTION_ID</strong>: $.context.transaction_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_MESSAGE_ID</strong>: $.context.message_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TIMESTAMP</strong>: $.context.timestamp must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TTL</strong>: $.context.ttl must be present in the payload</p>
+</li>
+</ul>
+</li>
+<li><p><strong>on_confirm</strong> : All the following sub conditions must pass as per the api requirement</p>
+<ul>
+<li><p><strong>condition REQUIRED_CONTEXT_DOMAIN</strong>: all of the following sub conditions must be met:</p>
+<ul>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.1</strong>: $.context.domain must be present in the payload</li>
+<li><strong>condition REQUIRED_CONTEXT_DOMAIN.2</strong>: every element of $.context.domain must be in [&quot;ONDC:RET11&quot;]</li>
+</ul>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_COUNTRY</strong>: $.context.country must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CITY</strong>: $.context.city must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_ACTION</strong>: $.context.action must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_CORE_VERSION</strong>: $.context.core_version must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_ID</strong>: $.context.bap_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_BAP_URI</strong>: $.context.bap_uri must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TRANSACTION_ID</strong>: $.context.transaction_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_MESSAGE_ID</strong>: $.context.message_id must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TIMESTAMP</strong>: $.context.timestamp must be present in the payload</p>
+</li>
+<li><p><strong>condition REQUIRED_CONTEXT_TTL</strong>: $.context.ttl must be present in the payload</p>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Select all list items that have a nested <ul> (collapsible items)
+        const collapsibleItems = document.querySelectorAll('li > ul');
+
+        collapsibleItems.forEach(function(nestedList) {
+            const parentLi = nestedList.parentElement;
+            parentLi.classList.add('collapsible', 'collapsed');
+
+            // Add click event listener to the <p> inside the list item
+            const clickableArea = parentLi.querySelector('p');
+            clickableArea.addEventListener('click', function(e) {
+                // Prevent click events on links inside the <p>
+                if (e.target.tagName !== 'A') {
+                    parentLi.classList.toggle('collapsed');
+                }
+            });
+        });
+    });
+</script>
+</html>
